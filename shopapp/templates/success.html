@@ -1,0 +1,45 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>
+        Blinking with JavaScript
+    </title>
+  
+    <style >
+        #blink {
+            font-size: 60px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+  
+<body>
+    <p id="blink">
+        Your Order Has Been Placed Successfully..!
+    </p>
+      
+    <script type="text/javascript">
+        var blink = 
+            document.getElementById('blink');
+  
+        setInterval(function () {
+            blink.style.opacity = 
+            (blink.style.opacity == 0 ? 1 : 0);
+        }, 1000); 
+    </script>
+</body>
+  
+<br>
+<br>
+<br>
+<br>
+</html>
+
+
+{% endblock %}
